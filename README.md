@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>index.html</title>
+
+  
+</head><body>
+<div style="text-align: center;"><img style="width: 736px; height: 220px;" src="header.jpg" alt=""><br>
+<br>
+<br>
+--------------------------------------------------------------------------------<br>
+<br>
+<br>
+<img style="width: 600px; height: 800px;" src="motivation.jpg" alt=""><br>
+<br>
+<br>
+--------------------------------------------------------------------------------<br>
+<br>
+<br>
+<img style="width: 600px; height: 800px;" src="cv1.jpg" alt=""><br>
+<img style="width: 600px; height: 800px;" src="cv2.jpeg" alt=""><br>
+<br>
+<br>
+--------------------------------------------------------------------------------<br>
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="refme.jpg" alt=""><br>
+<br>
+<br>
+--------------------------------------------------------------------------------<br>
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="refda.jpg" alt=""><br>
+<br>
+<br>
+--------------------------------------------------------------------------------<br>
+<br>
+<br>
+<img style="width: 500px; height: 200px;" src="refal.jpg" alt=""><br>
+<br>
+<br>
+--------------------------------------------------------------------------------<br>
+<br>
+<br>
+<img style="width: 500px; height: 110px;" src="refga.jpg" alt=""><br>
+<br>
+<br>
+--------------------------------------------------------------------------------<br>
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="refme.jpg" alt=""><br>
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="reffr.jpeg" alt=""><br>
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="microweb.jpeg" alt="">
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="microfr.jpeg" alt="">
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="bebimwo97.jpeg" alt="">
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="bebimwin95.jpeg" alt="">
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="bebimpp97.jpeg" alt="">
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="bebimex97.jpeg" alt="">
+<br>
+<br>
+<img style="width: 500px; height: 250px;" src="microweb2.jpeg" alt=""><br>
+<br>
+</div>
+
+</body></html>
