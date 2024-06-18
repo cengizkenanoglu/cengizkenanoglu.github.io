@@ -2,7 +2,7 @@
 <html><head>
   
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>index.html</title>
+  <title>Cengiz Kenanoglu Personel Site</title>
 
   
 </head><body>
