@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garage Euro Américaine - Spécialiste en réparation automobile européenne et américaine à Saint-Hubert. Services de qualité, entretien, réparation et diagnostic.">
+    <meta name="keywords" content="garage, réparation automobile, Saint-Hubert, entretien voiture, mécanique, diagnostic auto, freins, moteur">
+    <title>Garage Euro Américaine - Spécialiste en réparation automobile</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://www.garageeuroamericaine.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Garage Euro Américaine - Spécialiste en réparation automobile">
+    <meta property="og:description" content="Garage Euro Américaine - Spécialiste en réparation automobile européenne et américaine à Saint-Hubert">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.garageeuroamericaine.com">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Garage Euro Américaine",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3275 1re Rue local 9",
+        "addressLocality": "Saint-Hubert",
+        "addressRegion": "QC",
+        "postalCode": "J3Y 8Y6",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.5017,
+        "longitude": -73.5673
+      },
+      "url": "https://www.garageeuroamericaine.com",
+      "telephone": "+1-450-123-4567",
+      "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-12:00"
+    }
+    </script>
+    
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --white: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin-left: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .language-switcher {
+            display: flex;
+            margin-left: 2rem;
+        }
+        
+        .language-switcher button {
+            background: none;
+            border: none;
+            color: var(--white);
+            cursor: pointer;
+            padding: 5px 10px;
+            margin-left: 5px;
+            border-radius: 3px;
+            transition: background 0.3s;
+        }
+        
+        .language-switcher button.active {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .language-switcher button:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg') no-repeat center center/cover;
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background-color: var(--light-color);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .about-image {
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            background-color: var(--white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+        
+        .contact-details p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .map {
+            height: 300px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h4 {
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: var(--light-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem;
+            }
+            
+            .language-switcher {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <span class="logo-icon">🔧</span>
+                <h1>Garage Euro Américaine</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                    <li><a href="#services" data-fr="Services" data-en="Services">Services</a></li>
+                    <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+                    <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="language-switcher">
+                <button class="active" data-lang="fr">FR</button>
+                <button data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="container">
+            <h2 data-fr="Votre spécialiste en réparation automobile" data-en="Your automotive repair specialist">Votre spécialiste en réparation automobile</h2>
+            <p data-fr="Garage Euro Américaine offre des services de réparation et d'entretien de qualité pour véhicules européens et américains à Saint-Hubert et ses environs." data-en="Garage Euro Américaine offers quality repair and maintenance services for European and American vehicles in Saint-Hubert and surrounding areas.">Garage Euro Américaine offre des services de réparation et d'entretien de qualité pour véhicules européens et américains à Saint-Hubert et ses environs.</p>
+            <a href="#contact" class="btn" data-fr="Prendre rendez-vous" data-en="Book an appointment">Prendre rendez-vous</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title" data-fr="Nos Services" data-en="Our Services">Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/diag.png');"></div>
+                    <div class="service-content">
+                        <h3 data-fr="Diagnostic électronique" data-en="Electronic diagnostics">Diagnostic électronique</h3>
+                        <p data-fr="Utilisation des dernières technologies pour identifier rapidement et précisément les problèmes de votre véhicule." data-en="Using the latest technologies to quickly and accurately identify issues with your vehicle.">Utilisation des dernières technologies pour identifier rapidement et précisément les problèmes de votre véhicule.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/moteur.png');"></div>
+                    <div class="service-content">
+                        <h3 data-fr="Réparation moteur" data-en="Engine repair">Réparation moteur</h3>
+                        <p data-fr="Réparations complètes du moteur pour tous types de véhicules européens et américains." data-en="Complete engine repairs for all types of European and American vehicles.">Réparations complètes du moteur pour tous types de véhicules européens et américains.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/frein.png');"></div>
+                    <div class="service-content">
+                        <h3 data-fr="Système de freinage" data-en="Brake system">Système de freinage</h3>
+                        <p data-fr="Inspection, réparation et remplacement des systèmes de freinage pour votre sécurité." data-en="Inspection, repair and replacement of brake systems for your safety.">Inspection, réparation et remplacement des systèmes de freinage pour votre sécurité.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/ent.png');"></div>
+                    <div class="service-content">
+                        <h3 data-fr="Entretien régulier" data-en="Regular maintenance">Entretien régulier</h3>
+                        <p data-fr="Services d'entretien préventif pour maintenir votre véhicule en parfait état de fonctionnement." data-en="Preventive maintenance services to keep your vehicle in perfect working condition.">Services d'entretien préventif pour maintenir votre véhicule en parfait état de fonctionnement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-fr="À Propos de Nous" data-en="About Us">À Propos de Nous</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-fr="Notre Expertise Depuis Plus de 15 Ans" data-en="Our Expertise for Over 15 Years">Notre Expertise Depuis Plus de 15 Ans</h2>
+                    <p data-fr="Fondé en 2008, Garage Euro Américaine s'est établi comme un leader dans la réparation de véhicules européens et américains dans la région de Saint-Hubert. Notre équipe de techniciens certifiés possède une expertise approfondie des marques telles que BMW, Mercedes, Audi, Volkswagen, Ford, Chevrolet et bien d'autres." data-en="Founded in 2008, Garage Euro Américaine has established itself as a leader in the repair of European and American vehicles in the Saint-Hubert area. Our team of certified technicians has in-depth expertise in brands such as BMW, Mercedes, Audi, Volkswagen, Ford, Chevrolet and many more.">Fondé en 2008, Garage Euro Américaine s'est établi comme un leader dans la réparation de véhicules européens et américains dans la région de Saint-Hubert. Notre équipe de techniciens certifiés possède une expertise approfondie des marques telles que BMW, Mercedes, Audi, Volkswagen, Ford, Chevrolet et bien d'autres.</p>
+                    <p data-fr="Nous nous engageons à fournir un service de qualité supérieure en utilisant des pièces de rechange authentiques et des équipements de diagnostic de pointe. Notre objectif est de garantir votre satisfaction et votre sécurité sur la route." data-en="We are committed to providing superior service using genuine spare parts and state-of-the-art diagnostic equipment. Our goal is to ensure your satisfaction and safety on the road.">Nous nous engageons à fournir un service de qualité supérieure en utilisant des pièces de rechange authentiques et des équipements de diagnostic de pointe. Notre objectif est de garantir votre satisfaction et votre sécurité sur la route.</p>
+                    <p data-fr="Notre garage est équipé des dernières technologies pour répondre aux besoins des véhicules modernes, y compris les systèmes hybrides et électriques. Faites-nous confiance pour prendre soin de votre véhicule comme s'il était le nôtre." data-en="Our garage is equipped with the latest technologies to meet the needs of modern vehicles, including hybrid and electric systems. Trust us to take care of your vehicle as if it were our own.">Notre garage est équipé des dernières technologies pour répondre aux besoins des véhicules modernes, y compris les systèmes hybrides et électriques. Faites-nous confiance pour prendre soin de votre véhicule comme s'il était le nôtre.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/prop.png" alt="Garage Euro Américaine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-fr="Contactez-Nous" data-en="Contact Us">Contactez-Nous</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-fr="Nos Coordonnées" data-en="Our Contact Information">Nos Coordonnées</h3>
+                    <div class="contact-details">
+                        <p><i>📍</i> 3275 1re Rue local 9, Saint-Hubert, QC J3Y 8Y6</p>
+                        <p><i>📞</i> +1 (450) 123-4567</p>
+                        <p><i>✉️</i> info@garageeuroamericaine.com</p>
+                        <p><i>🕒</i> <span data-fr="Lun-Ven: 8h00-17h00, Sam: 8h00-12h00" data-en="Mon-Fri: 8am-5pm, Sat: 8am-12pm">Lun-Ven: 8h00-17h00, Sam: 8h00-12h00</span></p>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.262685446175!2d-73.43292368444038!3d45.50173497910155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc938c8b2c0a9a5%3A0x1b8c9d5b0f0e0e0e!2s3275%201re%20Rue%20local%209%2C%20Saint-Hubert%2C%20QC%20J3Y%208Y6!5e0!3m2!1sfr!2sca!4v1633024000000!5m2!1sfr!2sca" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 data-fr="Envoyez-Nous un Message" data-en="Send Us a Message">Envoyez-Nous un Message</h3>
+                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-fr="Nom complet" data-en="Full Name">Nom complet</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-fr="Adresse email" data-en="Email Address">Adresse email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-fr="Numéro de téléphone" data-en="Phone Number">Numéro de téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-fr="Message" data-en="Message">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" data-fr="Envoyer le message" data-en="Send Message">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4 data-fr="Garage Euro Américaine" data-en="Garage Euro Américaine">Garage Euro Américaine</h4>
+                    <p data-fr="Votre spécialiste en réparation automobile européenne et américaine à Saint-Hubert." data-en="Your specialist in European and American automotive repair in Saint-Hubert.">Votre spécialiste en réparation automobile européenne et américaine à Saint-Hubert.</p>
+                </div>
+                <div class="footer-column">
+                    <h4 data-fr="Liens Rapides" data-en="Quick Links">Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a></li>
+                        <li><a href="#services" data-fr="Services" data-en="Services">Services</a></li>
+                        <li><a href="#about" data-fr="À propos" data-en="About">À propos</a></li>
+                        <li><a href="#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-fr="Nos Services" data-en="Our Services">Nos Services</h4>
+                    <ul>
+                        <li><a href="#" data-fr="Diagnostic électronique" data-en="Electronic diagnostics">Diagnostic électronique</a></li>
+                        <li><a href="#" data-fr="Réparation moteur" data-en="Engine repair">Réparation moteur</a></li>
+                        <li><a href="#" data-fr="Système de freinage" data-en="Brake system">Système de freinage</a></li>
+                        <li><a href="#" data-fr="Entretien régulier" data-en="Regular maintenance">Entretien régulier</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-fr="Contact" data-en="Contact">Contact</h4>
+                    <ul>
+                        <li>3275 1re Rue local 9, Saint-Hubert, QC J3Y 8Y6</li>
+                        <li>+1 (450) 123-4567</li>
+                        <li>info@garageeuroamericaine.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Garage Euro Américaine. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButtons = document.querySelectorAll('.language-switcher button');
+            const elementsToTranslate = document.querySelectorAll('[data-fr]');
+            
+            // Set default language to French
+            let currentLang = 'fr';
+            
+            // Function to switch language
+            function switchLanguage(lang) {
+                currentLang = lang;
+                
+                // Update button states
+                langButtons.forEach(button => {
+                    if (button.getAttribute('data-lang') === lang) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+                
+                // Update content
+                elementsToTranslate.forEach(element => {
+                    if (element.hasAttribute(`data-${lang}`)) {
+                        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                            element.placeholder = element.getAttribute(`data-${lang}`);
+                        } else {
+                            element.textContent = element.getAttribute(`data-${lang}`);
+                        }
+                    }
+                });
+                
+                // Update HTML lang attribute
+                document.documentElement.lang = lang;
+            }
+            
+            // Add click event listeners to language buttons
+            langButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+            
+            // Initialize with French
+            switchLanguage('fr');
+        });
+    </script>
+</body>
+</html>
