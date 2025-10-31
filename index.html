@@ -1,80 +1,771 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cengiz Kenanoglu</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cengiz Kenanoğlu - Administrateur Système - Technicien Informatique | System Admin - IT Technician</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .navbar {
+            background-color: var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(44, 62, 80, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 150px 0 100px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+        
+        .skill-category {
+            margin-bottom: 30px;
+        }
+        
+        .skill-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--secondary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .contact-info i {
+            width: 30px;
+            color: var(--secondary);
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenue Mon Site Personnel</h1>
-	<h1>Cengiz Kenanoglu</h1>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Cengiz Kenanoğlu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Accueil / Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Profil / Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Compétences / Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Expérience / Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Formation / Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe"></i> Langue / Language
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="fr">Français</a></li>
+                            <li><a class="dropdown-item lang-select" href="#" data-lang="en">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="references.html">Références</a></li>
-                <li><a href="documents.html">Documents</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <!-- French Content -->
+                    <div class="lang-content active" data-lang="fr">
+                        <h1 class="display-4 fw-bold mb-4">Cengiz Kenanoğlu</h1>
+                        <h2 class="h3 mb-4">Administrateur Système - Technicien Informatique</h2>
+                        <p class="lead mb-5">Je souhaite participer activement à un département informatique dynamique en utilisant les connaissances théoriques et l'expérience pratique que j'ai acquises dans le domaine des technologies de l'information.</p>
+                        <a href="#contact" class="btn btn-light btn-lg me-3">Me Contacter</a>
+                        <a href="#skills" class="btn btn-outline-light btn-lg">Mes Compétences</a>
+                    </div>
+                    
+                    <!-- English Content -->
+                    <div class="lang-content" data-lang="en">
+                        <h1 class="display-4 fw-bold mb-4">Cengiz Kenanoğlu</h1>
+                        <h2 class="h3 mb-4">System Admin - IT Technician</h2>
+                        <p class="lead mb-5">I want to actively participate in a dynamic IT department by using the theoretical knowledge and practical experience I have acquired in the field of information technology.</p>
+                        <a href="#contact" class="btn btn-light btn-lg me-3">Contact Me</a>
+                        <a href="#skills" class="btn btn-outline-light btn-lg">My Skills</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="profile-image mb-4">
+                        <img src="prob.jpg" alt="Cengiz Kenanoğlu" class="rounded-circle" style="width: 250px; height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="contact-brief">
+                        <p class="mb-1"><i class="fas fa-phone me-2"></i> 514-994-2848</p>
+                        <p class="mb-1"><i class="fas fa-envelope me-2"></i> cengizkenanoglu@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <main><center>
-        <section>
-	<h2>Ma Lettre de Motivation</h2>
-	<p> Madame, Monsieur</p><br>
- <p style="width: 600px;">Je vous adresse ma candidature pour le poste de soutien technique en informatique  
-au sein de votre entreprise. Fort d'une solide expérience dans le domaine de
- l'informatique, je suis convaincu que mes compétences techniques et ma passion
- pour la résolution de problèmes complexes font de moi un candidat idéal pour ce
- poste. Au cours de mes 5 années d'expérience en tant que technicien en soutien
- informatique j'ai développé une expertise approfondie dans la conception, la mise en
- œuvre et la maintenance de réseaux informatiques complexes. De plus, ma capacité à
- travailler efficacement en équipe et à communiquer clairement avec les parties
- prenantes internes et externes a été essentielle pour mener à bien des projets dans
- des environnements dynamiques.</p><br>
- <p style="width: 600px;">En tant que professionnel de l'informatique passionné par l'innovation, je suis
- constamment à l'affût des dernières tendances et des meilleures pratiques en matière
- de gestion de réseau. Je suis convaincu que mon engagement envers l'apprentissage
- continu et ma capacité à m'adapter rapidement aux nouvelles technologies me
- permettront de contribuer de manière significative à votre équipe. Je serais honoré
- de pouvoir apporter ma contribution à votre entreprise et de participer à la
- réalisation de vos objectifs en matière de gestion de réseau informatique. Je suis
- disponible pour un entretien à votre convenance et je me tiens à votre disposition
- pour toute information complémentaire.</p><br>
- <p style="width: 600px;">Je vous remercie vivement de l'attention que vous porterez à ma candidature. Dans
- l'attente de votre réponse, je vous prie d'agréer, Madame, Monsieur, l'expression de
- mes salutations distinguées.</p><br>
- <p>Cordialement.</p><br>
-		<br>
-		<br>
-<h2>My Cover Letter</h2>
-<p> Dear Sir/Madam</p><br>
-<p style="width: 600px;">I am applying for the position of IT technical support
-within your company. With solid experience in the field of IT, I am convinced that my technical skills and my passion
-for solving complex problems make me an ideal candidate for this
-position. During my 5 years of experience as an IT support technician, I have developed in-depth expertise in the design,
-implementation and maintenance of complex IT networks. In addition, my ability to work
-effectively in a team and communicate clearly with internal and external
-stakeholders has been essential to successfully complete projects in
-dynamic environments.</p><br>
-<p style="width: 600px;">As an IT professional with a passion for innovation, I am
-constantly on the lookout for the latest trends and best practices in network
-management. I am confident that my commitment to continuous learning and my ability to adapt quickly to new technologies 
-will enable me to make a significant contribution to your team. 
-I would be honored to be able to contribute to your company and help achieve your IT network management goals. 
-I am available for an interview at your convenience and remain at your disposal for any further information.</p><br>
-<p style="width: 600px;">Thank you very much for your attention to my application.
-I look forward to hearing from you and
-your best regards.</p><br>
-<p>Sincerely,</p><br>
-	</section>
-    </center></main>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="fr">Profil Professionnel</span>
+                <span class="lang-content" data-lang="en">Professional Profile</span>
+            </h2>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- French Content -->
+                    <div class="lang-content active" data-lang="fr">
+                        <p class="mb-4">Technicien informatique passionné avec une solide expérience en réseautage, support technique et administration des systèmes. Je suis ouvert d'esprit, minutieux, autonome et organisé, avec une excellente capacité à gérer les priorités et le travail sous pression.</p>
+                        
+                        <h4 class="mb-3">Points Forts</h4>
+                        <ul>
+                            <li>Expérience solide en réseautage</li>
+                            <li>Support technique de premier et deuxième niveau</li>
+                            <li>Installation et maintenance de matériel informatique</li>
+                            <li>Configuration et paramétrage des ordinateurs et des périphériques</li>
+                            <li>Planification des tâches en respectant les délais</li>
+                            <li>Approche axée sur les résultats</li>
+                            <li>Habileté à prendre rapidement des décisions optimales</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- English Content -->
+                    <div class="lang-content" data-lang="en">
+                        <p class="mb-4">Passionate IT technician with solid experience in networking, technical support and system administration. I am open-minded, meticulous, autonomous and organized, with excellent ability to manage priorities and work under pressure.</p>
+                        
+                        <h4 class="mb-3">Key Strengths</h4>
+                        <ul>
+                            <li>Solid networking experience</li>
+                            <li>First and second level technical support</li>
+                            <li>Installation and maintenance of computer hardware</li>
+                            <li>Configuration and setup of computers and peripherals</li>
+                            <li>Task planning while respecting deadlines</li>
+                            <li>Results-oriented approach</li>
+                            <li>Ability to make optimal decisions quickly</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">
+                                <span class="lang-content active" data-lang="fr">Langues</span>
+                                <span class="lang-content" data-lang="en">Languages</span>
+                            </h4>
+                            
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Français</span>
+                                    <span>Intermédiaire</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>English</span>
+                                    <span>Intermediate</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span>Turc</span>
+                                    <span>Maternelle</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <center><p>&copy; 2025 Mon Site Personnel</p></center>
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="fr">Compétences Techniques</span>
+                <span class="lang-content" data-lang="en">Technical Skills</span>
+            </h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h4 class="mb-4">
+                            <i class="fas fa-network-wired me-2 text-primary"></i>
+                            <span class="lang-content active" data-lang="fr">Administration des réseaux</span>
+                            <span class="lang-content" data-lang="en">Network Administration</span>
+                        </h4>
+                        
+                        <div class="skill-item">
+                            <h5>GPO, OU, Gestion des utilisateurs, TCP/IP</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="mb-4">
+                            <i class="fas fa-server me-2 text-primary"></i>
+                            <span class="lang-content active" data-lang="fr">Virtualisation et stockage</span>
+                            <span class="lang-content" data-lang="en">Virtualization and Storage</span>
+                        </h4>
+                        
+                        <div class="skill-item">
+                            <h5>VMware vCenter/ESXi, Hyper-V, Proxmox, TrueNAS, Docker, SAN (iSCSI), NAS, Failover Cluster</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="mb-4">
+                            <i class="fab fa-windows me-2 text-primary"></i>
+                            <span class="lang-content active" data-lang="fr">Administration des serveurs Windows</span>
+                            <span class="lang-content" data-lang="en">Windows Server Administration</span>
+                        </h4>
+                        
+                        <div class="skill-item">
+                            <h5>Active Directory, DNS, DHCP, WSUS, WDS, SCCM, VPN, Ansible, Exchange, IIS (FTP)</h5>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="skill-category">
+                        <h4 class="mb-4">
+                            <i class="fab fa-linux me-2 text-primary"></i>
+                            <span class="lang-content active" data-lang="fr">Linux</span>
+                            <span class="lang-content" data-lang="en">Linux</span>
+                        </h4>
+                        
+                        <div class="skill-item">
+                            <h5>FreeIPA, DHCP, BIND (DNS), Postfix/Dovecot, FRR, OpenVPN, OpenSSL, VSFTPD, Samba, OpenSSH, NFS</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="mb-4">
+                            <i class="fas fa-shield-alt me-2 text-primary"></i>
+                            <span class="lang-content active" data-lang="fr">Sécurité et firewall</span>
+                            <span class="lang-content" data-lang="en">Security and Firewall</span>
+                        </h4>
+                        
+                        <div class="skill-item">
+                            <h5>PfSense (OpenVPN, Squid Firewall), OpenVPN, OpenSSL</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4 class="mb-4">
+                            <i class="fas fa-database me-2 text-primary"></i>
+                            <span class="lang-content active" data-lang="fr">Autres compétences</span>
+                            <span class="lang-content" data-lang="en">Other Skills</span>
+                        </h4>
+                        
+                        <div class="skill-item">
+                            <h5>Gestion des bases de données: SQL Server, MySQL, MariaDB</h5>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <h5>Téléphonie IP: Asterisk</h5>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <h5>Langages de script et de programmation: Python, Bash, PowerShell</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="fr">Expériences Professionnelles</span>
+                <span class="lang-content" data-lang="en">Professional Experience</span>
+            </h2>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title mb-0">
+                                    <span class="lang-content active" data-lang="fr">Technicien Informatique (Bénévolat)</span>
+                                    <span class="lang-content" data-lang="en">IT Technician (Volunteer)</span>
+                                </h4>
+                                <span class="badge bg-primary">Mars 2025</span>
+                            </div>
+                            <h5 class="text-primary">Garage Euro-Américaine (Saint-Hubert)</h5>
+                            
+                            <div class="lang-content active" data-lang="fr">
+                                <ul class="mt-3">
+                                    <li>Offrir un support technique de premier et deuxième niveau</li>
+                                    <li>Contrôle et maintenance des ordinateurs, résolution des problèmes techniques</li>
+                                    <li>Installation et configuration des imprimantes, dépannage des problèmes liés aux périphériques</li>
+                                    <li>Support technique rapide et efficace pour les utilisateurs</li>
+                                    <li>Assistance sur les problèmes matériels et logiciels</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="lang-content" data-lang="en">
+                                <ul class="mt-3">
+                                    <li>Provide first and second level technical support</li>
+                                    <li>Computer control and maintenance, resolution of technical problems</li>
+                                    <li>Installation and configuration of printers, troubleshooting peripheral problems</li>
+                                    <li>Fast and effective technical support for users</li>
+                                    <li>Assistance with hardware and software problems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title mb-0">
+                                    <span class="lang-content active" data-lang="fr">Stagiaire Technicien Informatique</span>
+                                    <span class="lang-content" data-lang="en">IT Technician Intern</span>
+                                </h4>
+                                <span class="badge bg-primary">2024 - 2025</span>
+                            </div>
+                            <h5 class="text-primary">Cisss Montérégié Centre (Longueuil)</h5>
+                            
+                            <div class="lang-content active" data-lang="fr">
+                                <ul class="mt-3">
+                                    <li>Offrir un support technique de premier et deuxième niveau</li>
+                                    <li>Vérifier la validité des demandes</li>
+                                    <li>Formater et configurer les ordinateurs avec SCCM et les cellulaires avec Intune</li>
+                                    <li>Faire les modifications et ajustements nécessaires pour les utilisateurs d'un VPN</li>
+                                    <li>Procéder à l'installation des logiciels avec Application Center</li>
+                                    <li>Préparer et procéder à l'attribution des téléphones et des lignes attribuées aux particuliers</li>
+                                    <li>Réaliser un inventaire des appareils reçus (ordinateurs, cellulaires, tablettes) et identifier les connexions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="lang-content" data-lang="en">
+                                <ul class="mt-3">
+                                    <li>Provide first and second level technical support</li>
+                                    <li>Verify the validity of requests</li>
+                                    <li>Format and configure computers with SCCM and cell phones with Intune</li>
+                                    <li>Make necessary modifications and adjustments for VPN users</li>
+                                    <li>Install software with Application Center</li>
+                                    <li>Prepare and assign phones and lines to individuals</li>
+                                    <li>Inventory received devices (computers, cell phones, tablets) and identify connections</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h4 class="card-title mb-0">
+                                    <span class="lang-content active" data-lang="fr">Technicien Informatique</span>
+                                    <span class="lang-content" data-lang="en">IT Technician</span>
+                                </h4>
+                                <span class="badge bg-primary">2003 - 2007</span>
+                            </div>
+                            <h5 class="text-primary">Cagdas Mermer Sanayi Ith.Ih.Ltd.Sti. (Turquie)</h5>
+                            
+                            <div class="lang-content active" data-lang="fr">
+                                <ul class="mt-3">
+                                    <li>Offrir un support technique de premier et deuxième niveau</li>
+                                    <li>Procéder à l'installation et faire la maintenance des postes de travail et des périphériques</li>
+                                    <li>Gérer les comptes utilisateurs et les différentes autorisations</li>
+                                    <li>Faire des documentations des procédures et former les utilisateurs</li>
+                                    <li>Configurer les paramètres de partage de fichiers</li>
+                                    <li>Configurer les paramètres de l'imprimante centrale</li>
+                                    <li>Collaborer avec les équipes de développement en fonction des besoins</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="lang-content" data-lang="en">
+                                <ul class="mt-3">
+                                    <li>Provide first and second level technical support</li>
+                                    <li>Install and maintain workstations and peripherals</li>
+                                    <li>Manage user accounts and different permissions</li>
+                                    <li>Document procedures and train users</li>
+                                    <li>Configure file sharing settings</li>
+                                    <li>Configure central printer settings</li>
+                                    <li>Collaborate with development teams as needed</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="fr">Formation</span>
+                <span class="lang-content" data-lang="en">Education</span>
+            </h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">
+                                <span class="lang-content active" data-lang="fr">AEC en Gestion de réseaux, sécurité et virtualisation</span>
+                                <span class="lang-content" data-lang="en">AEC in Network Management, Security and Virtualization</span>
+                            </h4>
+                            <p class="text-primary mb-2">2024</p>
+                            <p class="mb-0">Collège Rosemont, Montréal</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">
+                                <span class="lang-content active" data-lang="fr">Certificat de création de sites web, programmation web et e-commerce</span>
+                                <span class="lang-content" data-lang="en">Certificate in Website Creation, Web Programming and E-commerce</span>
+                            </h4>
+                            <p class="text-primary mb-2">2006</p>
+                            <p class="mb-0">Microsis - Turquie</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h4 class="card-title">
+                                <span class="lang-content active" data-lang="fr">Certificat de spécialisation programmes Microsoft Office</span>
+                                <span class="lang-content" data-lang="en">Microsoft Office Specialization Certificate</span>
+                            </h4>
+                            <p class="text-primary mb-2">1999</p>
+                            <p class="mb-0">Bebim Computer & MTSK - Turquie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="fr">Contact</span>
+                <span class="lang-content" data-lang="en">Contact</span>
+            </h2>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="contact-info">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-phone fa-lg me-3"></i>
+                            <div>
+                                <h5 class="mb-0">Téléphone / Phone</h5>
+                                <p class="mb-0">514-994-2848</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-envelope fa-lg me-3"></i>
+                            <div>
+                                <h5 class="mb-0">Email</h5>
+                                <p class="mb-0">cengizkenanoglu@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-globe fa-lg me-3"></i>
+                            <div>
+                                <h5 class="mb-0">Site Web / Website</h5>
+                                <p class="mb-0">https://cengizkenanoglu.github.io</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                            <i class="fab fa-linkedin fa-lg me-3"></i>
+                            <div>
+                                <h5 class="mb-0">LinkedIn</h5>
+                                <p class="mb-0">https://www.linkedin.com/in/cengiz-kenanoglu/</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">
+                                <span class="lang-content active" data-lang="fr">Envoyez-moi un message</span>
+                                <span class="lang-content" data-lang="en">Send me a message</span>
+                            </h4>
+                            
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">
+                                            <span class="lang-content active" data-lang="fr">Nom</span>
+                                            <span class="lang-content" data-lang="en">Name</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">
+                                        <span class="lang-content active" data-lang="fr">Sujet</span>
+                                        <span class="lang-content" data-lang="en">Subject</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">
+                                        <span class="lang-content active" data-lang="fr">Message</span>
+                                        <span class="lang-content" data-lang="en">Message</span>
+                                    </label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <span class="lang-content active" data-lang="fr">Envoyer le message</span>
+                                    <span class="lang-content" data-lang="en">Send Message</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">
+                        <span class="lang-content active" data-lang="fr">&copy; 2025 Cengiz Kenanoğlu. Tous droits réservés.</span>
+                        <span class="lang-content" data-lang="en">&copy; 2025 Cengiz Kenanoğlu. All rights reserved.</span>
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/cengiz-kenanoglu/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://cengizkenanoglu.github.io" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:cengizkenanoglu@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+        
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSelectors = document.querySelectorAll('.lang-select');
+            
+            langSelectors.forEach(selector => {
+                selector.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const selectedLang = this.getAttribute('data-lang');
+                    
+                    // Hide all language content
+                    document.querySelectorAll('.lang-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Show selected language content
+                    document.querySelectorAll(`.lang-content[data-lang="${selectedLang}"]`).forEach(content => {
+                        content.classList.add('active');
+                    });
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
