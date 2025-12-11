@@ -334,7 +334,36 @@
         <div class="container">
             <h2 data-en="Get In Touch" data-fr="Contactez-Nous">Get In Touch</h2>
             <p class="section-subtitle" data-en="Let's discuss how we can help transform your business" data-fr="Discutons de la façon dont nous pouvons transformer votre entreprise">Let's discuss how we can help transform your business</p>
-            
+                                    <form action="https://formspree.io/f/xyzkvrde" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">
+                                        <span class="lang-content active" data-lang="fr">Nom</span>
+                                        <span class="lang-content" data-lang="en">Name</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">
+                                        <span class="lang-content active" data-lang="fr">Votre email</span>
+                                        <span class="lang-content" data-lang="en">Your email</span>
+                                    </label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">
+                                    <span class="lang-content active" data-lang="fr">Votre message</span>
+                                    <span class="lang-content" data-lang="en">Your message</span>
+                                </label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <span class="lang-content active" data-lang="fr">Envoyer le message</span>
+                                <span class="lang-content" data-lang="en">Send Message</span>
+                            </button>
+                        </form>
             <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <div class="form-group">
                     <label data-en="Name" data-fr="Nom">Name</label>
@@ -410,3 +439,4 @@
     </script>
 </body>
 </html>
+
