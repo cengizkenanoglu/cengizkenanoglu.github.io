@@ -127,9 +127,15 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             margin-top: 50px;
+        }
+        
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .service-card {
@@ -292,6 +298,7 @@
         <div class="container">
             <h1 data-en="Transform Your Business with Technology" data-fr="Transformez Votre Entreprise avec la Technologie">Transform Your Business with Technology</h1>
             <p data-en="AI Automation • Web Development • Technical Support" data-fr="Automatisation IA • Développement Web • Support Technique">AI Automation • Web Development • Technical Support</p>
+            <p style="font-size: 18px; color: #b0b0b0; margin: 30px auto; max-width: 800px;" data-en="We are a dedicated firm that stays ahead of industry trends, delivers reliable solutions, and excels in everything we do. Your success is our mission." data-fr="Nous sommes une entreprise dévouée qui reste à l'avant-garde des tendances du secteur, fournit des solutions fiables et excelle dans tout ce que nous faisons. Votre succès est notre mission.">We are a dedicated firm that stays ahead of industry trends, delivers reliable solutions, and excels in everything we do. Your success is our mission.</p>
             <a href="#contact" class="cta-button" data-en="Get Started" data-fr="Commencer">Get Started</a>
         </div>
     </section>
@@ -368,7 +375,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Drive34. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+            <p>&copy; 2024 DRIVE-34. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
         </div>
     </footer>
 
@@ -402,5 +409,4 @@
         });
     </script>
 </body>
-
 </html>
